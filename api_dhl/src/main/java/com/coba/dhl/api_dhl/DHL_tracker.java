@@ -21,7 +21,7 @@ public class DHL_tracker {
     Response response;
     JSONObject jo = new JSONObject();
 
-    //for acces api http://localhost:1212/getData?trackingNumber=7777777770
+    //for acces api http://localhost:1212/getData?trackingNumber=xxxxxxxxxxxx
     @RequestMapping("/getData")
     public String getAcc(@RequestParam("trackingNumber")  String trackingNumber) throws IOException
     {
@@ -42,9 +42,9 @@ public class DHL_tracker {
             Request request = new Request.Builder()
                     .addHeader("content-type", "application/json")
                     .addHeader("Connection", "close")
-                    .addHeader("DHL-API-Key", "demo-key")
-                    .addHeader("ConsumerKey", "sESkHK7RV9nEHui001coROhMoeZgwSiv")
-                    .addHeader("ConsumerSecret", "ZFCJKQlCGf491Fuf")
+                    .addHeader("DHL-API-Key", "xxxxxxxxxxxx")
+                    .addHeader("ConsumerKey", "xxxxxxxxxxxx")
+                    .addHeader("ConsumerSecret", "xxxxxxxxxxxx")
                     .removeHeader("Content-Encoding")
                     .removeHeader("Content-Length")
                     .url(httpUrl) // <- Finally put httpUrl in here
