@@ -32,16 +32,16 @@ MediaType mediaType = MediaType.parse("application/json");
             .host("api-eu.dhl.com")
             .addPathSegment("track")
             .addPathSegment("shipments")
-            .addQueryParameter("trackingNumber", "7777777770")
+            .addQueryParameter("trackingNumber", "xxxxxxxxxxxx")
             .addQueryParameter("service", "express")
                .build();
 
     Request request = new Request.Builder()
             .addHeader("content-type", "application/json")
             .addHeader("Connection","close")
-            .addHeader("DHL-API-Key", "demo-key")
-            .addHeader("ConsumerKey", "sESkHK7RV9nEHui001coROhMoeZgwSiv")
-            .addHeader("ConsumerSecret", "ZFCJKQlCGf491Fuf")
+            .addHeader("DHL-API-Key", "xxxxxxxxxxxx")
+            .addHeader("ConsumerKey", "xxxxxxxxxxxx")
+            .addHeader("ConsumerSecret", "xxxxxxxxxxxx")
             .url(httpUrl) // <- Finally put httpUrl in here
             .build();
 
